@@ -40,4 +40,38 @@ public class Problems {
 		}
 		return factores.get(factores.size()-1);
 	}
+	
+	public int problemFour() {
+		int mult = 0;
+		int halfString = 0;
+		String number="";
+		String firstSubString = "";
+		String secondSubString = "";
+		boolean eureka;
+		int mayor = 0;
+		for(int i = 999;i >= 100; i--) {
+			for(int j = 999;j >= 100; j--) {
+				eureka = true;
+				mult = i*j;
+				number = String.valueOf(mult);
+				halfString = (int)number.length()/2;
+				firstSubString = number.substring(0, halfString);
+				secondSubString = number.substring(halfString, number.length());
+				for(int k = 1; k <= halfString; k++) {
+					if(firstSubString.charAt(k-1)!= secondSubString.charAt(secondSubString.length()-k)) {
+						eureka = false;
+						break;
+					}
+				}
+				if(eureka) {
+					if(mult > mayor) {
+						mayor = mult;
+					}
+				}
+				
+			}
+		}
+		return mayor;
+
+	}
 }
