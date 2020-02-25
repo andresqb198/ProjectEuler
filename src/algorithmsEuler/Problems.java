@@ -1,9 +1,14 @@
 package algorithmsEuler;
 import Math.Mathematics;
+import Math.PrimeNumbers;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Problems {
 	
 	Mathematics problem = new Mathematics();
+	PrimeNumbers primes = new PrimeNumbers();
+	
 	
 	public int problemOne() {
 		
@@ -23,5 +28,16 @@ public class Problems {
 		}
 		return sum;
 		
+	}
+	
+	public int problemThree() {
+		List<Integer> factores = new ArrayList();
+		long  number = 600851475143L;
+		for(int p:primes.under10ThousandPrimes()) {
+			if(number%p == 0) {
+				factores.add(p);
+			}
+		}
+		return factores.get(factores.size()-1);
 	}
 }
