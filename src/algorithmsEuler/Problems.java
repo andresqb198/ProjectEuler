@@ -74,4 +74,22 @@ public class Problems {
 		return mayor;
 
 	}
+	
+	
+	public int problemFive() {
+		int initialNumber = 2520;
+		boolean isDiv = false;
+		while(!isDiv) {
+			isDiv = true;
+			initialNumber += 1;
+			for(int i = 2; i<= 20; i++) {
+				if(initialNumber%i != 0) {
+					isDiv = false;
+					break;
+				}
+			}			
+		}
+		return initialNumber;
+	}
+	
 }

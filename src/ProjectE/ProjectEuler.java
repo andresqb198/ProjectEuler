@@ -9,7 +9,7 @@ public class ProjectEuler {
 			Problems problemas = new Problems();
 			Mathematics math = new Mathematics();	
 			problemas.problemFour();
-			System.out.println("Problema 4: " + problemas.problemFour());
+			System.out.println("Problema 5: " + problemas.problemFive());
 	}
 
 }
