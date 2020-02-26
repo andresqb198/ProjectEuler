@@ -100,4 +100,8 @@ public class Problems {
 		
 	}
 	
+	public int problemSeven() {
+		return (int)this.problem.imprimirPrimos().get(10000);
+	}
+	
 }

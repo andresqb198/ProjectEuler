@@ -15,12 +15,12 @@ public class Mathematics {
 		return (int)(((1/Math.sqrt(5))*Math.pow(((1+Math.sqrt(5))/2), n))+0.5);
 	}
 	
-	public String imprimirPrimos(){
+	public List imprimirPrimos(){
 		List<Integer> primos = new ArrayList();
 		Integer firstPrim = 2;
 		boolean isPrimo = true;
 		primos.add(firstPrim);
-		for(Integer i = 3; i<=100000;i++) {
+		for(Integer i = 3; i<=150000;i++) {
 			for(Integer nprimo: primos) {
 				if((i%nprimo)==0) {
 					isPrimo = false;
@@ -32,17 +32,17 @@ public class Mathematics {
 			}
 			isPrimo = true;
 		}
-		String listaPrimos = "[";
-		int ln = 2;
-		for(Integer p:primos) {			
-			listaPrimos= listaPrimos+String.valueOf(p)+',';
-			if(ln%17==0) {
-				listaPrimos = listaPrimos + "\n";
-			}
-			ln++;
+		//String listaPrimos = "[";
+		//int ln = 2;
+		//for(Integer p:primos) {			
+			//listaPrimos= listaPrimos+String.valueOf(p)+',';
+			//if(ln%17==0) {
+				//listaPrimos = listaPrimos + "\n";
+			//}
+			//ln++;
 			
-		}
-		listaPrimos= listaPrimos+"]";
-		return listaPrimos;
+		//}
+		//listaPrimos= listaPrimos+"]";
+		return primos;
 	}
 }
