@@ -92,4 +92,12 @@ public class Problems {
 		return initialNumber;
 	}
 	
+	public int problemSix() {
+		int n = 100;
+		int sumOfTheSquares = (int)Math.pow((n*(n+1))/2, 2);
+		int squareOfTheSum = (n*(n+1)*(2*n+1))/6;
+		return  sumOfTheSquares-squareOfTheSum;		
+		
+	}
+	
 }

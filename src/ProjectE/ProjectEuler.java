@@ -8,8 +8,7 @@ public class ProjectEuler {
 		// TODO Auto-generated method stub
 			Problems problemas = new Problems();
 			Mathematics math = new Mathematics();	
-			problemas.problemFour();
-			System.out.println("Problema 5: " + problemas.problemFive());
+			System.out.println("Problema 6: " + problemas.problemSix());
 	}
 
 }
