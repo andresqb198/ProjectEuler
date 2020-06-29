@@ -140,5 +140,24 @@ public class Problems {
 		return max;
 	}
 	
+	public int problemNine() {
+		List terna;
+		int a,b,c;
+		for(int m = 500; m >= 2;m--) {
+			for(int n = m-1; n >= 1; n--) {
+				terna = problem.ternaPitagorica(n, m);
+				a = (int)terna.get(0);
+				b = (int)terna.get(1);
+				c = (int)terna.get(2);
+				if(a+b+c == 1000) {
+					return a*b*c;
+				}				
+
+			}				
+		}		
+		
+		return 0;
+	}
+	
 	
 }

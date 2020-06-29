@@ -15,6 +15,18 @@ public class Mathematics {
 		return (int)(((1/Math.sqrt(5))*Math.pow(((1+Math.sqrt(5))/2), n))+0.5);
 	}
 	
+	public List ternaPitagorica(int n,int m) {
+		List<Integer> terna = new ArrayList();
+		int a,b,c;
+		a = m*m-n*n;
+		b = 2*m*n;
+		c = m*m + n*n;
+		terna.add(a);
+		terna.add(b);
+		terna.add(c);
+		return terna;
+	}
+	
 	public List imprimirPrimos(){
 		List<Integer> primos = new ArrayList();
 		Integer firstPrim = 2;
@@ -44,5 +56,7 @@ public class Mathematics {
 		//}
 		//listaPrimos= listaPrimos+"]";
 		return primos;
+		
+		
 	}
 }
