@@ -1,9 +1,20 @@
 package Math;
+import java.util.*;
+
 
 public class PrimeNumbers{	
 	
 	public PrimeNumbers(){
 		
+	}
+	
+	public ArrayList<Integer> under10ThousandAsArrayList(){
+		int[] primesArray = under10ThousandPrimes();
+		ArrayList<Integer> under10KArrayList = new ArrayList<Integer>();
+		for(int primo:primesArray) {
+			under10KArrayList.add(primo);
+		}
+		return under10KArrayList;
 	}
 
 	public int[] under10ThousandPrimes() {
@@ -78,8 +89,56 @@ public class PrimeNumbers{
                 9467,9473,9479,9491,9497,9511,9521,9533,9539,9547,9551,9587,9601,9613,9619,9623,9629,
                 9631,9643,9649,9661,9677,9679,9689,9697,9719,9721,9733,9739,9743,9749,9767,9769,9781,
                 9787,9791,9803,9811,9817,9829,9833,9839,9851,9857,9859,9871,9883,9887,9901,9907,9923,
-                9929,9931,9941,9949,9967,9973,10007,10009};
+                9929,9931,9941,9949,9967,9973};
 		return under10Thousand;
+	}
+	
+	/***
+	 * Método que verifica si un número es primo o no teniendo en cuenta una lista de números primos.
+	 * @return true: si es divisible; false: si no es divisible por algún primo
+	 */
+	public boolean divisibleByList(int number, ArrayList<Integer> lista) {
+		if(lista.isEmpty()) return false;
+		int intPrimo;
+		for(Integer primo: lista) {
+			intPrimo = (int)primo;
+			if(number % intPrimo == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean divisibleByArray(int number, int[] array) {
+		int intPrimo;
+		for(int primo: array) {
+			if(number % primo == 0) {
+				System.out.println(number);
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	
+	public List under2MillionPrimes() {		
+		List<Integer> primos = new ArrayList();
+		Integer firstPrim = 2;
+		boolean isPrimo = true;
+		primos.add(firstPrim);
+		for(Integer i = 3; i<=2000000;i++) {
+			for(Integer nprimo: primos) {
+				if((i%nprimo)==0) {
+					isPrimo = false;
+					break;
+				}
+			}
+			if(isPrimo) {
+				primos.add(i);
+			}
+			isPrimo = true;
+		}		
+		return primos;
 	}
 	                               
 }

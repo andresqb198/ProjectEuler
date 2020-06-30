@@ -159,5 +159,16 @@ public class Problems {
 		return 0;
 	}
 	
+	public long problemTen(){
+		List primesUnder2M = primes.under2MillionPrimes();
+		int number;
+		long sum = 0;
+		for(Object primo: primesUnder2M) {
+			number = (int)primo;
+			sum += number;
+		}
+		return sum;
+	}
+	
 	
 }
