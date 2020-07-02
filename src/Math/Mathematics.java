@@ -27,6 +27,54 @@ public class Mathematics {
 		return terna;
 	}
 	
+	public int GreatestProductMatrix(int matrix[][]) {
+		int mayor,product;
+		mayor = 0;
+		for(int i=0;i<=19;i++) {
+			for(int j=0;j<=19;j++) {
+				product = analizeProductsElement(matrix,i,j);
+				if(product > mayor) {
+					mayor = product;
+				}
+			}
+		}
+		return mayor;
+	}
+	
+	public int analizeProductsElement(int [][] matrix,int i,int j) {
+		int diagonal1 = 1;
+		int diagonal2 = 1;
+		int horizontal = 1;
+		int vertical = 1;
+		int mayor = 0;
+		for(int k = 0;k<=3;k++) {
+			if(i+3<=19 && j+3<=19) {
+				diagonal1 *= matrix[i+k][j+k];
+			}
+			if(i+3<=19 && j-3>=0) {
+				diagonal2 *= matrix[i+k][j-k];
+			}
+			if(i+3 <=19) {
+				vertical *= matrix[i+k][j];
+			}
+			if(j+3 <=19) {
+				horizontal *= matrix[i][j+k];
+			}		
+		}
+		if(diagonal1 > diagonal2) {
+			mayor = diagonal1;
+		}else if(diagonal2 > vertical) {
+			mayor = diagonal2;
+		}else if(vertical > horizontal) {
+			mayor = vertical;
+		}else {
+			mayor = horizontal;
+		}			
+		
+		return mayor;
+	}
+	
+	
 	public List imprimirPrimos(){
 		List<Integer> primos = new ArrayList();
 		Integer firstPrim = 2;
@@ -55,8 +103,7 @@ public class Mathematics {
 			
 		//}
 		//listaPrimos= listaPrimos+"]";
-		return primos;
-		
+		return primos;	
 		
 	}
 }
