@@ -120,6 +120,35 @@ public class PrimeNumbers{
 		return true;
 	}
 	
+	public List erastotenesCrive(int n) {
+		ArrayList<Integer> primos = new ArrayList<Integer>();
+		boolean[] crive = new boolean[n+1];
+		Arrays.fill(crive, true);
+		crive[0] = false;
+		crive[1] = false;
+		int k;
+		int j;
+		for(int i = 2; i <= Math.sqrt(n); i++) {
+			if(crive[i]==true) {
+				k = 1;
+				j = i*i;
+				while(j <= n){
+					crive[j] = false;
+					j = i*i + i*k;
+					k++;
+				}
+				j = 0;
+				k = 0;
+			}
+		}
+		for(int i = 0; i <= n; i++) {
+			if(crive[i]) {
+				primos.add(i);
+			}
+		}
+		
+		return primos;
+	}
 	
 	public List under2MillionPrimes() {		
 		List<Integer> primos = new ArrayList();

@@ -75,6 +75,10 @@ public class Mathematics {
 	}
 	
 	
+	public int triangleNumber(int n) {
+		return (n*(n+1))/2;
+	}
+	
 	public List imprimirPrimos(){
 		List<Integer> primos = new ArrayList();
 		Integer firstPrim = 2;

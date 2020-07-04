@@ -1,6 +1,7 @@
 package ProjectE;
 import algorithmsEuler.*;
 import Math.Mathematics;
+import Math.PrimeNumbers;
 
 public class ProjectEuler {
 
@@ -9,7 +10,8 @@ public class ProjectEuler {
 		// TODO Auto-generated method stub
 			Problems problemas = new Problems();
 			Mathematics math = new Mathematics();	
-			System.out.println("Problema 11: " + problemas.problemEleven());
+			PrimeNumbers prime = new PrimeNumbers();
+			System.out.println("Problema 12: " + problemas.problemTwelve());
 	}
 
 }

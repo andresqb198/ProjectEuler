@@ -75,7 +75,6 @@ public class Problems {
 
 	}
 	
-	
 	public int problemFive() {
 		int initialNumber = 2520;
 		boolean isDiv = false;
@@ -194,9 +193,26 @@ public class Problems {
 		        {01,70,54,71,83,51,54,69,16,92,33,48,61,43,52,01,89,19,67,48}
 		        };
 		
-		return problem.GreatestProductMatrix(matrix);	
-		
-		
+		return problem.GreatestProductMatrix(matrix);			
+	}
+	
+	public long problemTwelve(){
+		long number;
+		int cantPrimes = 0;
+		for(int i = 12; i <= 100000; i++) {
+			cantPrimes = 0;
+			number = this.problem.triangleNumber(i);
+			for(int j= 1; j<= Math.sqrt(number);j++) {
+				if(number % j == 0) {
+					cantPrimes+=2;
+				}
+			}
+			if(cantPrimes >= 500) {
+				return number;
+			}
+			
+		}
+		return cantPrimes;
 	}
 	
 }
