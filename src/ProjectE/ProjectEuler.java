@@ -11,7 +11,7 @@ public class ProjectEuler {
 			Problems problemas = new Problems();
 			Mathematics math = new Mathematics();	
 			PrimeNumbers prime = new PrimeNumbers();
-			System.out.println("Problema 12: " + problemas.problemTwelve());
+			System.out.println("Problema 13: " + problemas.problemThirteen());
 	}
 
 }
