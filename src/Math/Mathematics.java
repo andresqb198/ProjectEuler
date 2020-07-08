@@ -78,6 +78,16 @@ public class Mathematics {
 	public int triangleNumber(int n) {
 		return (n*(n+1))/2;
 	}
+		
+	public long nextCollatz(long collatz) {
+        if(collatz <= 2){
+            return 1;
+        }
+        if(collatz%2 == 0){
+            return collatz/2;
+        }
+        return (3*collatz) + 1;
+	}
 	
 	public List imprimirPrimos(){
 		List<Integer> primos = new ArrayList();

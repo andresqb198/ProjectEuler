@@ -329,4 +329,34 @@ public class Problems {
 		return suma.toString().substring(0, 10);
 	}
 	
+	public int problemFourteen() {
+		int[] counter = new int[1000001];
+		counter[1] = 1;
+		ArrayList<String> collatzSequence = new ArrayList<String>();
+		int mayorSecuencia = 0, number = 0; 
+		long collatz;
+		for(int i=2;i<=1000000;i++) {
+			collatz = i;
+			while(collatz != 1) {
+				collatzSequence.add(String.valueOf(collatz));
+				collatz = problem.nextCollatz(collatz);
+				if(collatz < i && collatz > 0 && collatz <1000000) {
+					counter[i] += counter[(int)collatz];
+					break;	
+				}
+			}
+			counter[i] += collatzSequence.size();
+			collatzSequence.clear();
+		}
+		for(int j = 2; j <= 1000000; j++) {
+			if(counter[j]>mayorSecuencia) {
+				mayorSecuencia = counter[j];
+				number = j;
+			}
+		}	
+		
+		return number;
+
+	}
+	
 }
