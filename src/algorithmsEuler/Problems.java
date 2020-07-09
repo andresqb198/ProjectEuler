@@ -11,12 +11,12 @@ public class Problems {
 	PrimeNumbers primes = new PrimeNumbers();
 	
 	
-	public int problemOne() {
+	public int problem1() {
 		
 		return problem.sumDivBy(5, 999) + problem.sumDivBy(3, 999) -problem.sumDivBy(15, 999);
 	}
 	
-	public int problemTwo() {
+	public int problem2() {
 		int i = 0;
 		int sum = 0;
 		int fibonacciNumber = problem.generatorFibonacci(i);
@@ -31,7 +31,7 @@ public class Problems {
 		
 	}
 	
-	public int problemThree() {
+	public int problem3() {
 		List<Integer> factores = new ArrayList();
 		long  number = 600851475143L;
 		for(int p:primes.under10ThousandPrimes()) {
@@ -42,7 +42,7 @@ public class Problems {
 		return factores.get(factores.size()-1);
 	}
 	
-	public int problemFour() {
+	public int problem4() {
 		int mult = 0;
 		int halfString = 0;
 		String number="";
@@ -76,7 +76,7 @@ public class Problems {
 
 	}
 	
-	public int problemFive() {
+	public int problem5() {
 		int initialNumber = 2520;
 		boolean isDiv = false;
 		while(!isDiv) {
@@ -92,7 +92,7 @@ public class Problems {
 		return initialNumber;
 	}
 	
-	public int problemSix() {
+	public int problem6() {
 		int n = 100;
 		int sumOfTheSquares = (int)Math.pow((n*(n+1))/2, 2);
 		int squareOfTheSum = (n*(n+1)*(2*n+1))/6;
@@ -100,11 +100,11 @@ public class Problems {
 		
 	}
 	
-	public int problemSeven() {
+	public int problem7() {
 		return (int)this.problem.imprimirPrimos().get(10000);
 	}
 	
-	public long problemEigth() {
+	public long problem8() {
 		String chain = "73167176531330624919225119674426574742355349194934"+
 				"96983520312774506326239578318016984801869478851843"+
 				"85861560789112949495459501737958331952853208805511"+
@@ -140,7 +140,7 @@ public class Problems {
 		return max;
 	}
 	
-	public int problemNine() {
+	public int problem9() {
 		List terna;
 		int a,b,c;
 		for(int m = 500; m >= 2;m--) {
@@ -159,7 +159,7 @@ public class Problems {
 		return 0;
 	}
 	
-	public long problemTen(){
+	public long problem10(){
 		List primesUnder2M = primes.under2MillionPrimes();
 		int number;
 		long sum = 0;
@@ -170,7 +170,7 @@ public class Problems {
 		return sum;
 	}
 	
-	public int problemEleven() {
+	public int problem11() {
 		int matrix [][] = {
 		        {8,02,22,97,38,15,00,40,00,75,04,05,07,78,52,12,50,77,91,8},
 		        {49,49,99,40,17,81,18,57,60,87,17,40,98,43,69,48,04,56,62,00},
@@ -197,7 +197,7 @@ public class Problems {
 		return problem.GreatestProductMatrix(matrix);			
 	}
 	
-	public long problemTwelve(){
+	public long problem12(){
 		long number;
 		int cantPrimes = 0;
 		for(int i = 12; i <= 100000; i++) {
@@ -216,7 +216,7 @@ public class Problems {
 		return cantPrimes;
 	}
 	
-	public String problemThirteen() {
+	public String problem13() {
 		BigInteger suma;
 		String numberToSum;
 		String cadena = "37107287533902102798797998220837590246510135740250" + 
@@ -329,7 +329,7 @@ public class Problems {
 		return suma.toString().substring(0, 10);
 	}
 	
-	public int problemFourteen() {
+	public int problem14() {
 		int[] counter = new int[1000001];
 		counter[1] = 1;
 		ArrayList<String> collatzSequence = new ArrayList<String>();
@@ -359,4 +359,12 @@ public class Problems {
 
 	}
 	
+	public long problem15() {
+		long combinatory = 1;
+		int n=20;
+		for(int i = 1; i<=n;i++) {
+			combinatory = combinatory * (n+i)/i;
+		}
+		return combinatory;
+	}
 }
