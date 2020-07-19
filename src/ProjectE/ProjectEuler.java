@@ -10,8 +10,8 @@ public class ProjectEuler {
 		// TODO Auto-generated method stub
 			Problems problemas = new Problems();
 			Mathematics math = new Mathematics();	
-			PrimeNumbers prime = new PrimeNumbers();
-			System.out.println("Problema 15: " + problemas.problem15());
+			PrimeNumbers prime = new PrimeNumbers();		
+			System.out.println("Problema 17: " + problemas.problem17());
 	}
 
 }

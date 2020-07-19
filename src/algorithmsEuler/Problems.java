@@ -367,4 +367,31 @@ public class Problems {
 		}
 		return combinatory;
 	}
+	
+	public int problem16() {
+		BigInteger dos = new BigInteger("2");
+        BigInteger dosPow = dos.pow(1000);
+        String StringDosPow = dosPow.toString();
+        int suma = 0;
+        for (int i = 0; i < StringDosPow.length(); ++i) {
+            char c = StringDosPow.charAt(i);
+            suma += (c-'0');
+        }
+        return suma;
+	}
+	
+	public int problem17() {
+		int onetonine = "onetwothreefourfivesixseveneightnine".length();
+        int tentonineteen = "teneleventwelvethirteenfourteenfifteensixteenseventeeneighteennineteen".length();
+        int and = "and".length();
+        int twentytoninety = "twentythirtyfortyfiftysixtyseventyeightyninety".length();
+        int hundred = "hundred".length();
+        int thousand = "thousand".length();
+        int count = "one".length() + thousand + 
+          900*hundred + 100*onetonine + 
+          100*twentytoninety + 891*and + 
+          80*onetonine + 10*(onetonine + tentonineteen);
+        return count;
+	}
+	
 }
